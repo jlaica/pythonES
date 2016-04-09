@@ -37,15 +37,27 @@ kwES = {
 }
 
 
-def has_token(token, scrypt):
-	p = re.compile('\\b' + token + '\\b')
-	return p.search(scrypt)
+# def has_token(token, scrypt):
+# 	p = re.compile('\\b' + token + '\\b')
+# 	return p.search(scrypt)
 
+# def kws_to_EN(scrypt):
+# 	for kw in kwES:
+# 		if has_token(kw, scrypt):
+# 			scrypt = scrypt.replace(kw, kwES[kw])
+
+# 	return scrypt
+
+def has_token(token, scrypt):
+	pattern = re.compile('\\b' + token + '\\b')
+	if pattern.search(scrypt):
+		return pattern
 
 def kws_to_EN(scrypt):
 	for kw in kwES:
-		if has_token(kw, scrypt):
-			scrypt = scrypt.replace(kw, kwES[kw])
+		patternToken = has_token(kw, scrypt)
+		if patternToken:
+			scrypt = re.sub(patternToken, kwES[kw], scrypt)
 
 	return scrypt
 
