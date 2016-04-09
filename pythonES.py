@@ -18,6 +18,11 @@ def pytonES(file):
 		scryptEN = kws_to_EN(scryptSP)
 
 	exec(scryptEN)
+	'''
+	TODO Create a file .py with scryptEN a scryptEN.py
+	if no exists created
+	else if exist run it to do the program faster
+	'''
 
 
 def Main():
