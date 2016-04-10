@@ -15,8 +15,9 @@ que se podria correr con pythonES:
 
 ejemplo.pyes
 
----------------------------------------------------------------
-#!/usr/bin/env python
+
+<pre>
+<code>
 
 the_world_is_flat = 1
 if the_world_is_flat:
@@ -26,7 +27,7 @@ el_mundo_es_plano = 1
 si el_mundo_es_plano:
 	imprimir "Ten Cuidado de no caerte !!"
 
-######################################################
+
 
 a, b = 0, 1
 while b < 10:
@@ -38,7 +39,7 @@ mientras b < 10:
 	imprimir b
 	a, b = b, a+b
 
-######################################################
+
 
 x = 1
 if x < 0:
@@ -61,7 +62,12 @@ sino x == 1:
 	imprimir 'Uno'
 otro:
 	imprimir 'Más'
----------------------------------------------------------------
+
+
+</code>
+</pre>
+	
+
 
 Acepta los tokens en Ingles y en Español porque pythonES.py lo unico que hace es traducir todos los tokens en Español al Ingles con lo cual se consigue un script ejecutable por python.
 
